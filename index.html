@@ -20,6 +20,18 @@
       background-color: #f8f9fa;
       padding: 30px 0;
     }
+    .btn-primary {
+      background-color: #e60000; /* Akzentfarbe Rot */
+      border-color: #e60000;
+    }
+    .btn-primary:hover {
+      background-color: #cc0000;
+      border-color: #cc0000;
+    }
+    .feedback-section {
+      background-color: #f9f9f9;
+      padding: 60px 0;
+    }
   </style>
 </head>
 <body>
@@ -35,7 +47,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">Über Uns</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Leistungen</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
         </ul>
       </div>
     </div>
@@ -46,7 +58,7 @@
     <div class="container">
       <h1 class="display-4">Coaching & Relocation Service</h1>
       <p class="lead">Individuelle Begleitung für Ihren Neustart im In- oder Ausland</p>
-      <a href="#contact" class="btn btn-primary btn-lg mt-4">Jetzt Kontakt aufnehmen</a>
+      <a href="#feedback" class="btn btn-primary btn-lg mt-4">Feedback hinterlassen</a>
     </div>
   </header>
 
@@ -98,27 +110,28 @@
     </div>
   </section>
 
-  <!-- Kontaktformular -->
-  <section id="contact" class="section-padding">
+  <!-- Feedback -->
+  <section id="feedback" class="feedback-section">
     <div class="container">
-      <h2 class="text-center mb-5">Kontaktieren Sie uns</h2>
-      <form>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Ihr Name">
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="email" class="form-label">E-Mail</label>
-            <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail">
+      <h2 class="text-center mb-5">Was unsere Kunden sagen</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="testimonial">
+            <blockquote>
+              <p>"Dank des Coachings habe ich meinen Traumjob gefunden und konnte mich erfolgreich in meiner neuen Stadt integrieren. Sehr empfehlenswert!"</p>
+              <footer>- Maria S.</footer>
+            </blockquote>
           </div>
         </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Nachricht</label>
-          <textarea class="form-control" id="message" rows="5" placeholder="Ihre Nachricht..."></textarea>
+        <div class="col-md-6">
+          <div class="testimonial">
+            <blockquote>
+              <p>"Die Relocation-Dienstleistungen waren äußerst hilfreich. Von der Wohnungssuche bis hin zu den administrativen Aufgaben – alles war perfekt organisiert!"</p>
+              <footer>- Jens B.</footer>
+            </blockquote>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Absenden</button>
-      </form>
+      </div>
     </div>
   </section>
 
