@@ -13,45 +13,101 @@
     body {
       scroll-behavior: smooth;
     }
-    .hero {
-      background: url('https://via.placeholder.com/1920x600') no-repeat center center;
+    #profil .card {
+    transition: all 0.3s ease;
+  }
+  
+  #profil .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  #profil .badge {
+    transition: all 0.3s ease;
+  }
+  
+  #profil .badge:hover {
+    background-color: #e60000 !important;
+    color: white !important;
+  }
+  
+  #profil .bi {
+    vertical-align: middle;
+  }
+  
+  #profil .rounded-circle {
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+    .parallax-banner {
+      background-image: url('Pictures/Lighthouse.jpeg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
       background-size: cover;
+      min-height: 600px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero {
+      background: transparent;
       color: white;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
       padding: 100px 0;
+      padding-top: 180px;
+      padding-bottom: 200px;
+      position: relative;
+      z-index: 2;
+      height: 700px;
     }
+
     .section-padding {
       padding: 60px 0;
     }
+
     .banner {
-      background: url('https://via.placeholder.com/1920x400') no-repeat center center;
+      background: url('Pictures/Lighthouse.jpeg') no-repeat center center;
       background-size: cover;
       height: 400px;
       margin-bottom: 30px;
     }
+
     footer {
       background-color: #f8f9fa;
       padding: 30px 0;
     }
+
     .btn-primary {
       background-color: #e60000;
       border-color: #e60000;
     }
+
     .btn-primary:hover {
       background-color: #cc0000;
       border-color: #cc0000;
     }
+
     .feedback-section {
       background-color: #f9f9f9;
     }
+
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
     }
+
     .content {
-      margin-top: 80px; /* Adjusting for the fixed navbar */
+      margin-top: 0; /* Adjusting for the fixed navbar */
+    }
+
+    .text-shadow {
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
@@ -83,63 +139,115 @@
   <!-- Content Wrapper -->
   <div class="content">
 
-    <!-- Hero Section -->
-    <header class="hero text-center">
-      <div class="container">
+    <!-- Parallax Hero Banner (Merged) -->
+    <div class="parallax-banner">
+      <header class="hero text-center container">
         <h1 class="display-4">Coaching & Relocation Service</h1>
         <p class="lead">Individuelle Begleitung für Ihren Neustart im In- oder Ausland</p>
         <a href="#feedback" class="btn btn-primary btn-lg mt-4">Feedback hinterlassen</a>
-      </div>
-    </header>
-
-
-
-
-    <!-- Empty Picture Banner -->
-    <div class="banner"></div>
-
-    <!-- Profil Section -->
+      </header>
+    </div>
+<!-- Profil Section -->
 <section id="profil" class="section-padding bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Profil</h2>
-
-    <div class="row">
-      <!-- Zur Person -->
-      <div class="col-md-6">
-        <h4>Zur Person</h4>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-person-fill me-2 text-danger"></i> Jahrgang 1967, verheiratet, Mutter von zwei Jungs</li>
-        </ul>
-        <h5 class="mt-4">Berufliche Entwicklung</h5>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Langjährige Erfahrung als Coach, Trainerin und Relocator im internationalen Umfeld</li>
-          <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Mehrjähriger Auslandaufenthalt in Melbourne/Australien</li>
-          <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Operative Personalarbeit in internationalen Unternehmen</li>
-          <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Langjährige Personalerfahrung in verantwortungsvoller Position großer Wirtschaftsunternehmen</li>
-        </ul>
+    
+    <div class="row align-items-center mb-5">
+      <!-- Profile Image Column -->
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <div class="rounded-circle bg-white shadow d-inline-flex p-2 mb-3">
+          <img src="Pictures/profile-placeholder.jpg" alt="Andrea S. Wach" class="rounded-circle" width="200" height="200">
+        </div>
+        <h4 class="mt-3">Andrea S. Wach</h4>
+        <p class="text-muted"><i class="bi bi-person me-2"></i>Jahrgang 1967, verheiratet, Mutter von zwei Jungs</p>
       </div>
-
-      <!-- Zusatzausbildungen -->
-      <div class="col-md-6">
-        <h4>Zusatzausbildungen</h4>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Zertifizierter Mediator</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Zertifikation nach Samy Molcho – Körpersprache des Erfolgs</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> The WORK™ Coach of Byron Katie</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Business-Trainer KRÖBER Kommunikation</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Systemischer Coach mit den Zusatzmodulen Karriere-Coaching und Transaktionsanalyse</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Ausbildereignungsprüfung</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Studium der Betriebswirtschaft (VWA)</li>
-          <li><i class="bi bi-award-fill me-2 text-primary"></i> Cambridge Certification – Melbourne/Australien</li>
-        </ul>
+      
+      <!-- Profile Content Column -->
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="row">
+              <!-- Professional Experience -->
+              <div class="col-md-6">
+                <h5 class="fw-bold border-bottom pb-2 mb-3">
+                  <i class="bi bi-briefcase me-2 text-danger"></i>Berufliche Entwicklung
+                </h5>
+                <ul class="list-unstyled">
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle text-success me-3 mt-1"></i>
+                    <span>Langjährige Erfahrung als Coach, Trainerin und Relocator im internationalen Umfeld</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle text-success me-3 mt-1"></i>
+                    <span>Mehrjähriger Auslandaufenthalt in Melbourne/Australien</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle text-success me-3 mt-1"></i>
+                    <span>Operative Personalarbeit in internationalen Unternehmen</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle text-success me-3 mt-1"></i>
+                    <span>Langjährige Personalerfahrung in verantwortungsvoller Position</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Certifications -->
+              <div class="col-md-6">
+                <h5 class="fw-bold border-bottom pb-2 mb-3">
+                  <i class="bi bi-award me-2 text-primary"></i>Zusatzausbildungen
+                </h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-light text-dark border p-2 mb-2">Zertifizierter Mediator</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">Samy Molcho – Körpersprache des Erfolgs</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">The WORK™ Coach of Byron Katie</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">Business-Trainer KRÖBER Kommunikation</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">Systemischer Coach</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">Ausbildereignungsprüfung</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">Studium der Betriebswirtschaft (VWA)</span>
+                  <span class="badge bg-light text-dark border p-2 mb-2">Cambridge Certification – Melbourne</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Skills section - Added for modern profile -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4 class="text-center mb-4">Kernkompetenzen</h4>
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="bg-white rounded shadow-sm p-4 h-100">
+              <i class="bi bi-globe fs-1 text-danger mb-3"></i>
+              <h5>Internationale Erfahrung</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="bg-white rounded shadow-sm p-4 h-100">
+              <i class="bi bi-people fs-1 text-danger mb-3"></i>
+              <h5>Coaching & Training</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="bg-white rounded shadow-sm p-4 h-100">
+              <i class="bi bi-house-door fs-1 text-danger mb-3"></i>
+              <h5>Relocation Service</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="bg-white rounded shadow-sm p-4 h-100">
+              <i class="bi bi-translate fs-1 text-danger mb-3"></i>
+              <h5>Interkulturelle Kompetenz</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-
-    <!-- Empty Picture Banner -->
-    <div class="banner"></div>
 
     <!-- Coaching Section -->
     <section id="coaching" class="section-padding">

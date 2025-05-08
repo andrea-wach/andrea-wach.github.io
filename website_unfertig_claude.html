@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WACH Coaching & Relocation Service</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0a6ebd;
+      --secondary: #f9f9f9;
+      --dark: #212529;
+      --light: #ffffff;
+      --accent: #ffa500;
+      --text: #333333;
+      --light-text: #6c757d;
+      --section-padding: 5rem 0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+    }
+    
+    section {
+      padding: var(--section-padding);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .btn-outline-primary {
+      color: var(--primary);
+      border-color: var(--primary);
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    /* Navigation */
+    .navbar {
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar .navbar-brand {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+    
+    .navbar .nav-link {
+      color: var(--dark);
+      font-weight: 500;
+      margin: 0 10px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .navbar .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+    
+    .navbar .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .navbar .lang-switch {
+      padding: 5px 15px;
+      border-radius: 20px;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar .lang-switch:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    /* Hero section */
+    .hero {
+      position: relative;
+      height: 90vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Pictures/Lighthouse.jpeg') no-repeat center center;
+      background-size: cover;
+      color: white;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    /* Cards and features */
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .icon-box {
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .icon-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-box i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    /* Profile section */
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .qualification-badge {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--text);
+      border-radius: 30px;
+      padding: 8px 15px;
+      margin: 5px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+    
+    .qualification-badge:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    /* Services section */
+    .service-card {
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(10, 110, 189, 0.1);
+      color: var(--primary);
+      font-size: 2rem;
+    }
+    
+    /* Testimonials */
+    .testimonial {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+    }
+    
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial .quote {
+      font-size: 3rem;
+      color: var(--primary);
+      opacity: 0.2;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    
+    /* Contact */
+    .contact-info i {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-right: 15px;
+    }
+    
+    .contact-form .form-control {
+      border-radius: 30px;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 50px 0 20px;
+    }
+    
+    footer h5 {
+      margin-bottom: 20px;
+      color: white;
+    }
+    
+    footer a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+      text-decoration: none;
+    }
+    
+    footer .social-links a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    footer .social-links a:hover {
+      background-color: var(--primary);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      margin-top: 30px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 991px) {
+      .navbar .nav-link {
+        margin: 5px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+    
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">WACH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Leistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          <li class="nav-item ms-3">
+            <a href="index_en.html" class="lang-switch">EN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="fade-in">Coaching & Relocation Service</h1>
+        <p class="fade-in">Individuelle Begleitung für Ihren erfolgreichen Neustart im In- oder Ausland</p>
+        <div class="fade-in">
+          <a href="#kontakt" class="btn btn-primary me-3">Kontakt aufnehmen</a>
+          <a href="#services" class="btn btn-outline-primary">Mehr erfahren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-house-door"></i>
+            <h4>Relocation Service</h4>
+            <p class="mb-0">Umfassende Unterstützung bei Ihrem Umzug ins In- oder Ausland</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-stars"></i>
+            <h4>Coaching</h4>
+            <p class="mb-0">Individuelle Begleitung bei beruflichen und persönlichen Herausforderungen</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-book"></i>
+            <h4>Training</h4>
+            <p class="mb-0">Maßgeschneiderte Programme zur Entwicklung Ihrer Kompetenzen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profil Section -->
+  <section id="profil">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Profil</h2>
+          <p class="lead">Erfahrung und Expertise für Ihre erfolgreiche Begleitung</p>
+        </div>
+      </div>
+      
+      <div class="row align-items-center mb-5">
+        <!-- Profile Image and Personal Info -->
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <img src="Pictures/profile-placeholder.jpg" alt="Andrea S. Wach" class="profile-image mb-4">
+          <h4>Andrea S. Wach</h4>
+          <p class="text-muted mb-2">Coach & Relocation Expertin</p>
+          <p class="small"><i class="bi bi-person me-2"></i>Jahrgang 1967, verheiratet, Mutter von zwei Söhnen</p>
+        </div>
+        
+        <!-- Professional Background -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm p-4">
+            <div class="row">
+              <!-- Professional Experience -->
+              <div class="col-md-6 mb-4">
+                <h5 class="d-flex align-items-center">
+                  <i class="bi bi-briefcase me-2 text-primary"></i>
+                  Berufliche Entwicklung
+                </h5>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                    <span>Langjährige Erfahrung als Coach, Trainerin und Relocator im internationalen Umfeld</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                    <span>Mehrjähriger Auslandaufenthalt in Melbourne/Australien</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                    <span>Operative Personalarbeit in internationalen Unternehmen</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                    <span>Langjährige Personalerfahrung in verantwortungsvoller Position</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Certifications -->
+              <div class="col-md-6">
+                <h5 class="d-flex align-items-center">
+                  <i class="bi bi-award me-2 text-primary"></i>
+                  Zusatzausbildungen
+                </h5>
+                <div class="mt-3">
+                  <span class="qualification-badge">Zertifizierter Mediator</span>
+                  <span class="qualification-badge">Samy Molcho – Körpersprache des Erfolgs</span>
+                  <span class="qualification-badge">The WORK™ Coach of Byron Katie</span>
+                  <span class="qualification-badge">Business-Trainer KRÖBER Kommunikation</span>
+                  <span class="qualification-badge">Systemischer Coach</span>
+                  <span class="qualification-badge">Ausbildereignungsprüfung</span>
+                  <span class="qualification-badge">Betriebswirtschaft (VWA)</span>
+                  <span class="qualification-badge">Cambridge Certification</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skills section -->
+      <div class="row mt-5">
+        <div class="col-12 text-center mb-4">
+          <h4>Kernkompetenzen</h4>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-globe"></i>
+            <h5>Internationale Erfahrung</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-people"></i>
+            <h5>Coaching & Training</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-house-door"></i>
+            <h5>Relocation Service</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-translate"></i>
+            <h5>Interkulturelle Kompetenz</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Unsere Leistungen</h2>
+          <p class="lead">Maßgeschneiderte Lösungen für Ihre individuellen Bedürfnisse</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Relocation Service -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-house-door"></i>
+            </div>
+            <h4>Relocation Service</h4>
+            <p>Wir unterstützen Sie umfassend bei Ihrem Umzug ins In- oder Ausland. Von der Wohnungssuche bis zur Eingewöhnung in die neue Umgebung.</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Wohnungssuche</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Behördengänge</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Kulturelle Integration</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Praktische Alltagshilfe</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Coaching -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+            <h4>Coaching</h4>
+            <p>Unser Coaching-Ansatz fördert die Selbstreflexion und hilft Ihnen, Ihre beruflichen und persönlichen Ziele zu erreichen.</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Karriere-Coaching</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Persönlichkeitsentwicklung</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Konfliktmanagement</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Work-Life-Balance</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Training -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-book"></i>
+            </div>
+            <h4>Training</h4>
+            <p>Unsere maßgeschneiderten Trainingsprogramme helfen Ihnen, Ihre Fähigkeiten zu erweitern und Ihr Potenzial auszuschöpfen.</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Kommunikationstraining</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Interkulturelle Kompetenz</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Führungskräfteentwicklung</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Teambuilding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback/Testimonials Section -->
+  <section id="feedback">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Kundenstimmen</h2>
+          <p class="lead">Was unsere Kunden über unsere Dienstleistungen sagen</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="testimonial position-relative">
+            <i class="bi bi-quote quote"></i>
+            <p class="mb-4">Dank des Coachings habe ich meinen Traumjob gefunden und konnte mich erfolgreich in meiner neuen Stadt integrieren. Der ganzheitliche Ansatz und die individuelle Betreuung haben mir sehr geholfen. Sehr empfehlenswert!</p>
+            <div class="d-flex align-items-center">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <span class="fw-bold">MS</span>
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0">Maria S.</h6>
+                <small class="text-muted">Führungskraft im IT-Bereich</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="testimonial position-relative">
+            <i class="bi bi-quote quote"></i>
+            <p class="mb-4">Die Relocation-Dienstleistungen waren äußerst hilfreich. Von der Wohnungssuche bis hin zu den administrativen Aufgaben – alles war perfekt organisiert! Frau Wach hat uns während des gesamten Prozesses kompetent und freundlich begleitet.</p>
+            <div class="d-flex align-items-center">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <span class="fw-bold">JB</span>
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0">Jens B.</h6>
+                <small class="text-muted">Ingenieur, umgezogen aus den USA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="kontakt" class="bg-light">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Kontakt</h2>
+          <p class="lead">Lassen Sie uns ins Gespräch kommen</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <div class="card p-4 h-100">
+            <h4>Kontaktinformationen</h4>
+            <p>Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Nehmen Sie gerne Kontakt mit uns auf.</p>
+            
+            <div class="contact-info d-flex align-items-center mb-3">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <h6 class="mb-0">Adresse</h6>
+                <p class="mb-0">Traminerweg 1, 71706 Markgröningen</p>
+              </div>
+            </div>
+            
+            <div class="contact-info d-flex align-items-center mb-3">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <h6 class="mb-0">E-Mail</h6>
+                <p class="mb-0">info@andrea-wach.de</p>
+              </div>
+            </div>
+            
+            <div class="contact-info d-flex align-items-center">
+              <i class="bi bi-telephone"></i>
+              <div>
+                <h6 class="mb-0">Telefon</h6>
+                <p class="mb-0">+49 175 940 5003</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-7">
+          <div class="card p-4">
+            <h4>Nachricht senden</h4>
+            <form class="contact-form mt-4">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="E-Mail" required>
+                </div>
+              </div>
+              <input type="text" class="form-control" placeholder="Betreff">
+              <textarea class="form-control" rows="5" placeholder="Ihre Nachricht" required></textarea>
+              <div class="text-end">
+                <button type="submit" class="btn btn-primary mt-3">Nachricht senden</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>WACH Relocation Service</h5>
+          <p>Individuelle Begleitung für Ihren erfolgreichen Neustart im In- oder Ausland.</p>
+          <div class="social-links mt-4">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5>Schnelllinks</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home">Home</a></li>
+            <li class="mb-2"><a href="#profil">Profil</a></li>
+            <li class="mb-2"><a href="#services">Leistungen</a></li>
+            <li class="mb-2"><a href="#feedback">Feedback</a></li>
+            <li class="mb-2"><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h5>Öffnungszeiten</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Montag - Freitag: 9:00 - 18:00 Uhr</li>
+            <li class="mb-2">Wochenende: Nach Vereinbarung</li>
+          </ul>
+          <p class="mt-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#impressumModal">Impressum</a> | 
+            <a href="#">Datenschutz</a>
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2025 WACH Relocation Service. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Impressum Modal -->
+  <div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="impressumModalLabel">Impressum</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>WACH Relocation Service</strong><br>
+            Traminerweg 1<br>
+            71706 Markgröningen<br>
+            Deutschland</p>
+          <p><strong>Vertreten durch:</strong><br>
+            Andrea S. Wach</p>
+          <p><strong>Kontakt:</strong><br>
+            E-Mail: info@andrea-wach.de<br>
+            Telefon: +49 175 940 5003</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    // Animate elements on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initial check for elements in viewport
+      const fadeElements = document.querySelectorAll('.fade-in');
+      checkFade();
+      
+      // Check elements on scroll
+      window.addEventListener('scroll', function() {
+        checkFade();
+      });
+      
+      function checkFade() {
+        fadeElements.forEach(function(element) {
+          if (isInViewport(element)) {
+            element.classList.add('active');
+          }
+        });
+      }
+      
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        );
+      }
+      
+      // Navbar scroll effect
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.style.padding = '10px 0';
+        } else {
+          navbar.style.padding = '15px 0';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
