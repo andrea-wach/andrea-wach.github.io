@@ -1,50 +1,536 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Under Construction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WACH Coaching & Relocation Service</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
 
-    .container {
-      background: white;
-      padding: 40px 60px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #666;
-      font-size: 1.1em;
-    }
-
-    .emoji {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
   </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="Logos/Logo.svg" alt="Logo" class="navbar-logo"> <img src="Logos/Logo2.pdf" alt="Logo" class="navbar-logo" style="height: 50px;"> 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Leistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          <li class="nav-item ms-3">
+            <a href="index_en.html" class="lang-switch">EN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Improved Hero Section -->
+  <section id="home" class="hero-container">
+    <div class="container">
+      <div class="hero-image-container fade-in">
+        <img src="Pictures/Lighthouse.jpeg" alt="Lighthouse" class="hero-image">
+        <div class="hero-overlay">
+          <h1 class="display-4 fw-bold">Coaching & Relocation Service</h1>
+          <p class="lead">Individuelle Begleitung für Ihren erfolgreichen Neustart im In- oder Ausland</p>
+        </div>
+      </div>
+      
+      <div class="hero-content">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <p class="lead fade-in">Wir unterstützen Sie bei allen Herausforderungen eines Umzugs und bieten professionelles Coaching für Ihre berufliche und persönliche Entwicklung.</p>
+            <div class="mt-4 fade-in">
+              <a href="#kontakt" class="btn btn-primary me-3">Kontakt aufnehmen</a>
+              <a href="#services" class="btn btn-outline-primary">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="icon-box zoom-in">
+            <i class="bi bi-house-door"></i>
+            <h4>Relocation Service</h4>
+            <p class="mb-0">Umfassende Unterstützung bei Ihrem Umzug ins In- oder Ausland</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box zoom-in">
+            <i class="bi bi-lightbulb"></i>
+            <h4>Coaching</h4>
+            <p class="mb-0">Individuelle Begleitung bei beruflichen und persönlichen Herausforderungen</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box zoom-in">
+            <i class="bi bi-book"></i>
+            <h4>Training</h4>
+            <p class="mb-0">Maßgeschneiderte Programme zur Entwicklung Ihrer Kompetenzen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <section class="py-4">
+    <div class="container">
+      <img src="Pictures/BeachSea.jpeg" alt="Stadtpanorama" class="featured-image slide-in-left">
+    </div>
+  </section>
+
+  <!-- Profil Section -->
+  <section id="profil" class="profile-section">
+    <div class="container profile-content">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Profil</h2>
+          <p class="lead">Erfahrung und Expertise für Ihre erfolgreiche Begleitung</p>
+        </div>
+      </div>
+      
+      <div class="row align-items-center mb-5">
+        <!-- Profile Info -->
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <h4>Andrea S. Wach</h4>
+          <p class="text-muted mb-2">Coach & Relocation Expertin</p>
+          <p class="small"><i class="bi bi-person me-2"></i>Jahrgang 1967, verheiratet, Mutter von zwei Söhnen</p>
+          <img src="Pictures/office.jpg" alt="" class="img-fluid rounded-3 mt-4">
+        </div>
+        
+        <!-- Professional Background -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm p-4">
+            <div class="row">
+              <!-- Professional Experience -->
+              <div class="col-md-6 mb-4">
+                <h5 class="d-flex align-items-center">
+                  <i class="bi bi-briefcase me-2 text-primary fs-2"></i>
+                  Berufliche Entwicklung
+                </h5>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill primary me-3 mt-1 text-primary"></i>
+                    <span>Langjährige Erfahrung als Coach, Trainerin und Relocator im internationalen Umfeld</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill primary me-3 mt-1 text-primary"></i>
+                    <span>Mehrjähriger Auslandaufenthalt in Melbourne/Australien</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill primary me-3 mt-1 text-primary"></i>
+                    <span>Operative Personalarbeit in internationalen Unternehmen</span>
+                  </li>
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check-circle-fill primary me-3 mt-1 text-primary"></i>
+                    <span>Langjährige Personalerfahrung in verantwortungsvoller Position</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Certifications -->
+              <div class="col-md-6">
+                <h5 class="d-flex align-items-center">
+                  <i class="bi bi-award me-2 fs-2 text-primary"></i>
+                  Zusatzausbildungen
+                </h5>
+                <div class="mt-3">
+                  <span class="qualification-badge fw-bold">Zertifizierter Mediator</span>
+                  <span class="qualification-badge fw-bold">Samy Molcho – Körpersprache des Erfolgs</span>
+                  <span class="qualification-badge fw-bold">The WORK™ Coach of Byron Katie</span>
+                  <span class="qualification-badge fw-bold">Business-Trainer KRÖBER Kommunikation</span>
+                  <span class="qualification-badge fw-bold">Systemischer Coach</span>
+                  <span class="qualification-badge fw-bold">Ausbildereignungsprüfung</span>
+                  <span class="qualification-badge fw-bold">Betriebswirtschaft (VWA)</span>
+                  <span class="qualification-badge fw-bold">Cambridge Certification</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skills section -->
+      <div class="row mt-5">
+        <div class="col-12 text-center mb-4">
+          <h4>Kernkompetenzen</h4>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-globe"></i>
+            <h5>Internationale Erfahrung</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-people"></i>
+            <h5>Coaching & Training</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-house-door"></i>
+            <h5>Relocation Service</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon-box">
+            <i class="bi bi-translate"></i>
+            <h5>Interkulturelle Kompetenz</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery 
+  <section class="image-gallery">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 gallery-item">
+          <img src="Pictures/city-life.jpg" alt="Stadtleben" class="slide-in-left">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="Pictures/relocation.jpg" alt="Umzug" class="zoom-in">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="Pictures/coaching.jpg" alt="Coaching Session" class="slide-in-right">
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+    <!-- Featured Image -->
+    <section class="py-4">
+      <div class="container">
+        <img src="Pictures/Stone_Mountain.jpeg" alt="Stadtpanorama" 
+        class="featured-image slide-in-left" 
+        style="object-fit: cover; object-position: center 89%; width: 100%;">
+      </div>
+    </section>
+  
+
+  <!-- Services Section -->
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Meine Leistungen</h2>
+          <p class="lead">Maßgeschneiderte Lösungen für Ihre individuellen Bedürfnisse</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Relocation Service -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-house-door"></i>
+            </div>
+            <h4>Relocation Service</h4>
+            <p>Wir unterstützen Sie umfassend bei Ihrem Umzug ins In- oder Ausland. Von der Wohnungssuche bis zur Eingewöhnung in die neue Umgebung.</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Wohnungssuche</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Behördengänge</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Kulturelle Integration</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Praktische Alltagshilfe</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Coaching -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h4>Coaching</h4>
+            <p>Unser Coaching-Ansatz fördert die Selbstreflexion und hilft Ihnen, Ihre beruflichen und persönlichen Ziele zu erreichen.</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Karriere-Coaching</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Persönlichkeitsentwicklung</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Konfliktmanagement</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Work-Life-Balance</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Training -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-book"></i>
+            </div>
+            <h4>Training</h4>
+            <p>Unsere maßgeschneiderten Trainingsprogramme helfen Ihnen, Ihre Fähigkeiten zu erweitern und Ihr Potenzial auszuschöpfen.</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Kommunikationstraining</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Interkulturelle Kompetenz</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Führungskräfteentwicklung</li>
+              <li><i class="bi bi-check-circle text-primary me-2"></i> Teambuilding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider with Icon -->
   <div class="container">
-    <div class="emoji">🚧</div>
-    <h1>Website Under Construction</h1>
-    <p>We're working hard to bring you something awesome.<br>Please check back soon!</p>
+    <div class="divider">
+      <div class="divider-icon">
+        <i class="bi bi-quote"></i>
+      </div>
+    </div>
   </div>
+
+  <!-- Featured Image -->
+  <section class="py-4">
+    <div class="container">
+      <img src="Pictures/Airplane.jpeg" alt="Workshop" class="featured-image slide-in-right">
+    </div>
+  </section>
+
+  <!-- Feedback/Testimonials Section -->
+  <section id="feedback">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2>Kundenstimmen</h2>
+          <p class="lead">Was unsere Kunden über unsere Dienstleistungen sagen</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="testimonial position-relative">
+            <i class="bi bi-quote quote"></i>
+            <p class="mb-4">Dank des Coachings habe ich meinen Traumjob gefunden und konnte mich erfolgreich in meiner neuen Stadt integrieren. Der ganzheitliche Ansatz und die individuelle Betreuung haben mir sehr geholfen. Sehr empfehlenswert!</p>
+            <div class="d-flex align-items-center">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <span class="fw-bold">MS</span>
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0">Maria S.</h6>
+                <small class="text-muted">Führungskraft im IT-Bereich</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="testimonial position-relative">
+            <i class="bi bi-quote quote"></i>
+            <p class="mb-4">Die Relocation-Dienstleistungen waren äußerst hilfreich. Von der Wohnungssuche bis hin zu den administrativen Aufgaben – alles war perfekt organisiert! Frau Wach hat uns während des gesamten Prozesses kompetent und freundlich begleitet.</p>
+            <div class="d-flex align-items-center">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <span class="fw-bold">JB</span>
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0">Jens B.</h6>
+                <small class="text-muted">Ingenieur, umgezogen aus den USA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+    <!-- Featured Image -->
+    <section class="py-4">
+      <div class="container">
+        <img src="Pictures/Laser.png" alt="Stadtpanorama" 
+        class="featured-image slide-in-left" 
+        style="object-fit: cover; object-position: center 89%; width: 100%;">
+      </div>
+    </section>
+
+  <!-- Contact Section -->
+  <section id="kontakt" class="contact-section">
+    <div class="container">
+
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-card text-center">
+            <h2 class="mb-4">Kontaktinformationen</h2>
+            <p class="mb-4">Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Nehmen Sie gerne Kontakt mit uns auf.</p>
+            
+            <div class="row mb-4">
+              <div class="col-md-4 mb-3 mb-md-0">
+                <div class="contact-info d-flex align-items-center">
+                  <i class="bi bi-geo-alt"></i>
+                  <div>
+                    <h6 class="mb-0">Adresse</h6>
+                    <p class="mb-0">Traminerweg 1<br>71706 Markgröningen</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-3 mb-md-0">
+                <div class="contact-info d-flex align-items-center">
+                  <i class="bi bi-envelope"></i>
+                  <div>
+                    <h6 class="mb-0">E-Mail</h6>
+                    <p class="mb-0">info@andrea-wach.de</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="contact-info d-flex align-items-center">
+                  <i class="bi bi-telephone"></i>
+                  <div>
+                    <h6 class="mb-0">Telefon</h6>
+                    <p class="mb-0">+49 175 940 5003</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-5">
+              <a href="mailto:info@andrea-wach.de" class="mail-btn">
+                <i class="bi bi-envelope-fill"></i> E-Mail schreiben
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>WACH Relocation Service</h5>
+          <p>Individuelle Begleitung für Ihren erfolgreichen Neustart im In- oder Ausland.</p>
+          <div class="social-links mt-4">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5>Schnelllinks</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home">Home</a></li>
+            <li class="mb-2"><a href="#profil">Profil</a></li>
+            <li class="mb-2"><a href="#services">Leistungen</a></li>
+            <li class="mb-2"><a href="#feedback">Feedback</a></li>
+            <li class="mb-2"><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <p class="mt-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#impressumModal">Impressum</a> 
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2025 WACH Relocation Service. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Impressum Modal -->
+  <div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="impressumModalLabel">Impressum</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>WACH Relocation Service</strong><br>
+            Traminerweg 1<br>
+            71706 Markgröningen<br>
+            Deutschland</p>
+          <p><strong>Vertreten durch:</strong><br>
+            Andrea Sabine Wach</p>
+          <p><strong>Kontakt:</strong><br>
+            E-Mail: info@andrea-wach.de<br>
+            Telefon: +49 175 940 5003</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    // Animate elements on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initial check for elements in viewport
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .zoom-in');
+      checkAnimation();
+      
+      // Check elements on scroll
+      window.addEventListener('scroll', function() {
+        checkAnimation();
+      });
+      
+      function checkAnimation() {
+        animatedElements.forEach(function(element) {
+          if (isInViewport(element)) {
+            element.classList.add('active');
+          }
+        });
+      }
+      
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        );
+      }
+      
+      // Navbar scroll effect
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.style.padding = '10px 0';
+        } else {
+          navbar.style.padding = '15px 0';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
