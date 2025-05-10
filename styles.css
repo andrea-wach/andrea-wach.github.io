@@ -137,7 +137,7 @@
   
   /* Adjust spacing between navbar items */
   .navbar-nav .nav-item {
-    margin-right: 20px; /* Space between navbar items */
+    margin-right: 15px; /* Space between navbar items */
   }
   
   /* Align the language switch to the far right */
