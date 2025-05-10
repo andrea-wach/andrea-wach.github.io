@@ -47,7 +47,8 @@
     border-color: var(--primary);
     transform: translateY(-3px);
   }
-  
+
+
   .btn-outline-primary {
     color: var(--primary);
     border-color: var(--primary);
@@ -59,6 +60,7 @@
   
   .btn-outline-primary:hover {
     background-color: var(--primary);
+    border-color: var(--primary);
     color: white;
     transform: translateY(-3px);
   }
@@ -398,12 +400,13 @@
     z-index: 0;
   }
   
-  .contact-info i {
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin-right: 15px;
-  }
-  
+.contact-info i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-right: 15px;
+  display: flex;
+  align-items: center; /* Ensure icon is vertically centered */
+}
   .contact-card {
     background-color: white;
     border-radius: 10px;
